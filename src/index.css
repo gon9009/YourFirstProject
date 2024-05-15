@@ -70,8 +70,8 @@ body {
 
 .icon {
   display: block;
-  margin-top: 20px;
-  margin-bottom: 25px;
+  margin-top: 7px;
+  margin-bottom: 7px;
 }
 
 .desc p {
@@ -88,13 +88,14 @@ body {
   align-items: center;
 }
 
-.title-container h1 {
+h1 .test-intro-title {
   font-size: 2.4rem;
   font-weight: 800;
-  letter-spacing: 2;
+  letter-spacing: 0.2rem;
   padding-bottom: 10px;
 }
 
+/* 반응형으로 교체 */
 .title-container .underline {
   background-color: #1d67fd;
   border-radius: 20px;
@@ -112,7 +113,6 @@ body {
 .emoji-container {
   width: 100%;
 }
-
 
 .emoji-container img {
   width: 100%;
@@ -139,4 +139,13 @@ body {
   font-size: 1.2rem;
   text-decoration: none;
   cursor: pointer;
+}
+
+/* =========== 유저이름 영역 =============== */
+
+h1 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  letter-spacing: 0.2rem;
+  padding-bottom: 10px;
 }
