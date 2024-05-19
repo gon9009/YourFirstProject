@@ -1,8 +1,9 @@
 import React from "react";
 import MainPage from "./components/MainPage";
-import UserNamePage from "./components/UserNamePage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
+import Questions from "./components/Questions";
+import ResultPage from "./components/ResultPage";
 
 function App() {
   return (
@@ -10,7 +11,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="/" element={<MainPage />} />
-          <Route path="/username" element={<UserNamePage />} />
+          <Route path="/questions" element={<Questions />} />
+          <Route path="/result/:id" element={<ResultPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

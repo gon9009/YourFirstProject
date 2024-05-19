@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 function MainPage() {
   return (
     <>
-    {/* 설명 영역  */}
+      {/* 설명 영역  */}
       <section className="desc-container">
         <div className="desc">
           <div className="icon-container">
@@ -55,8 +55,8 @@ function MainPage() {
       </section>
 
       <section className="btn-container">
-        <Link to="/username">
-          <button className="btn-start">시작하기</button>
+        <Link to="/Questions" className="btn-link">
+          <button className="btn">시작하기</button>
         </Link>
       </section>
     </>
