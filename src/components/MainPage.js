@@ -50,12 +50,14 @@ function MainPage() {
         </div>
       </section>
 
+    {/* 이모지 섹션 */}
       <section className="emoji-container">
         <img src={ThinkingEmoji} alt="Thinking Emoji" />
       </section>
 
+    {/* 버튼 섹션 */}
       <section className="btn-container">
-        <Link to="/Questions" className="btn-link">
+        <Link to="/questions" className="btn-link">
           <button className="btn">시작하기</button>
         </Link>
       </section>

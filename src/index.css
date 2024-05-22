@@ -7,8 +7,8 @@
 }
 
 body {
-  font-family: "Orbit", sans-serif;
   font-size: 1.2rem;
+  font-family: "Orbit", sans-serif;
   text-decoration: none;
   /* CSS Gradient 사용  */
   background: rgb(139, 182, 208);
@@ -28,6 +28,7 @@ body {
 }
 
 .btn {
+  font-family: "Orbit", sans-serif;
   color: white;
   margin: 0 auto;
   display: block;
@@ -119,7 +120,6 @@ body {
 }
 
 /* =========== 타이틀 영역 =============== */
-
 .title-container {
   display: flex;
   flex-direction: column;
@@ -134,24 +134,32 @@ h1 {
 }
 
 /* 반응형으로 교체 */
-.title-container .underline {
+.underline {
   background-color: #1d67fd;
   border-radius: 20px;
+  margin: 0 auto;
   width: 150px;
   height: 5px;
-  transition: all ease 0.7;
+  transition: all ease 0.3s;
 }
 
 .title-start {
   margin-top: 20px;
 }
-
-/* =========== 진행바(Progbar) ======================= */
+/* =============== 질문(Quetsions)===================== */
+.questions-container {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
 .progbar-container {
   height: 8px;
-  width: 80%;
+  width: 90%;
+  border-radius: 20px;
   margin: 20px auto;
+  background-color: #e6ddddfb;
 }
 
 .progbar {
@@ -161,34 +169,68 @@ h1 {
   transition: all 0.3s ease-in;
 }
 
-/* =============== 질문(Quetsions)===================== */
-
-.questions-container {
-  border: 3px solid black;
-}
-
 .question-card {
-  margin: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  margin: 10px;
+  text-align: center;
 }
 
 .question-number {
+  font-size: 22px;
+  font-weight: bold;
   margin: 0 auto;
-  font-weight: bolder;
-  font-size: larger;
+}
+
+.underline-question {
+  width: 15px;
+  height: 4px;
 }
 
 .question-text {
+  font-size: 30px;
+  margin-top: 30px;
+  margin-bottom: 100px;
+  line-height: 1.6;
 }
+
+/* ================== 질문/선택 버튼 ======================= */
 
 .btn-answer-container {
   margin: 0 auto;
-  width: 80%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
 }
 
 .btn-answer {
   color: white;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  width: 100%;
+}
+/* =================== 결과 페이지 ============================ */
+
+.result-container {
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.underline-result {
+  width: 100px;
+}
+
+.project-title-container p {
+  font-size: 24px;
 }
