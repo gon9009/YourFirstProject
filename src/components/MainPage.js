@@ -6,6 +6,7 @@ import ThinkingEmoji from "../assets/ThinkingEmoji.gif";
 import { Link } from "react-router-dom";
 
 function MainPage() {
+
   return (
     <>
       {/* 설명 영역  */}
@@ -50,12 +51,12 @@ function MainPage() {
         </div>
       </section>
 
-    {/* 이모지 섹션 */}
+      {/* 이모지 섹션 */}
       <section className="emoji-container">
         <img src={ThinkingEmoji} alt="Thinking Emoji" />
       </section>
 
-    {/* 버튼 섹션 */}
+      {/* 버튼 섹션 */}
       <section className="btn-container">
         <Link to="/questions" className="btn-link">
           <button className="btn">시작하기</button>

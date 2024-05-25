@@ -11,33 +11,54 @@ function Questions() {
   const { questionNum, question, answer1, answer2 } = QnA[index];
 
   const handleClick = (answer) => {
-    // 인자로 받은 프로젝트를 찾고
+    // 1.선택한 프로젝트 찾기
     const selectedProject = score.find(
       (project) => project.name === answer.project
     );
-
-    // 데이터를 업데이트 시킨다
     if (selectedProject) {
       const updatedScore = score.map((project) => {
         if (project.name === selectedProject.name) {
+          if (project.name === "영화 추천 앱") {
+            return { ...project, score: project.score + 1.5 };
+          }
           return { ...project, score: project.score + 1 };
         }
         return project;
       });
       setScore(updatedScore);
     }
+    // 3.다음 질문으로 이동
     handleNextQuestion();
   };
 
+  //4.스코어가 가장 높은 프로젝트 찾기/ 공동1등일 경우 랜덤으로
   const findHighestScore = () => {
     const sortedProjects = [...score].sort((a, b) => b.score - a.score);
-    return sortedProjects[0];
+    console.log(score);
+
+    // 가장 높은 점수를 가진 프로젝트 찾기
+    const highScore = sortedProjects[0].score;
+
+    const highScoreProjects = sortedProjects.filter(
+      (project) => project.score === highScore
+    );
+
+    if (highScoreProjects.length > 1) {
+      const randomIndex = Math.floor(Math.random() * highScoreProjects.length);
+      console.log("공동 1등이 있을때:");
+      console.log(highScoreProjects);
+      return highScoreProjects[randomIndex];
+    } else {
+      console.log("공동 1등이 없을때:");
+      console.log(highScoreProjects);
+      return highScoreProjects[0];
+    }
   };
 
+  //5.다음 컴포넌트로 이동
   const handleNextQuestion = () => {
     if (index === QnA.length - 1) {
       const projectType = findHighestScore().projectType;
-      console.log(`프로젝트 타입(Question 컴포넌트) : ${projectType}`);
       navigate(`/result/${projectType}`);
     } else {
       setIndex(index + 1);
