@@ -5,37 +5,22 @@ import { useNavigate } from "react-router-dom";
 import { ScoreContext } from "../context/ScoreContext";
 import QuestionCard from "./QuestionCard";
 import AnswerButton from "./AnswerButton";
+import ScoreUpdate from "./ScoreUpdate";
 
 function Questions() {
   const [index, setIndex] = useState(0);
-  const { score, setScore } = useContext(ScoreContext);
+  const { score } = useContext(ScoreContext);
   const { questionNum, question, answer1, answer2 } = QnA[index];
   const navigate = useNavigate();
 
   const handleClick = (answer) => {
-    // 1.선택한 프로젝트 찾기
-    const selectedProject = score.find(
-      (project) => project.name === answer.project
-    );
-    if (selectedProject) {
-      const updatedScore = score.map((project) => {
-        if (project.name === selectedProject.name) {
-          if (project.name === "영화 추천 앱") {
-            return { ...project, score: project.score + 1.5 };
-          }
-          return { ...project, score: project.score + 1 };
-        }
-        return project;
-      });
-      setScore(updatedScore);
-    }
+    ScoreUpdate(answer);
     handleNextQuestion();
   };
 
   //4.스코어가 가장 높은 프로젝트 찾기/ 공동1등일 경우 랜덤으로
   const findHighestScore = () => {
     const sortedProjects = [...score].sort((a, b) => b.score - a.score);
-    // 가장 높은 점수를 가진 프로젝트 찾기
     const highScore = sortedProjects[0].score;
     const highScoreProjects = sortedProjects.filter(
       (project) => project.score === highScore
