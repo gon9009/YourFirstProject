@@ -3,12 +3,14 @@ import Progbar from "./Progbar";
 import QnA from "../data/QnA";
 import { useNavigate } from "react-router-dom";
 import { ScoreContext } from "../context/ScoreContext";
+import QuestionCard from "./QuestionCard";
+import AnswerButton from "./AnswerButton";
 
 function Questions() {
   const [index, setIndex] = useState(0);
   const { score, setScore } = useContext(ScoreContext);
-  const navigate = useNavigate();
   const { questionNum, question, answer1, answer2 } = QnA[index];
+  const navigate = useNavigate();
 
   const handleClick = (answer) => {
     // 1.선택한 프로젝트 찾기
@@ -27,30 +29,21 @@ function Questions() {
       });
       setScore(updatedScore);
     }
-    // 3.다음 질문으로 이동
     handleNextQuestion();
   };
 
   //4.스코어가 가장 높은 프로젝트 찾기/ 공동1등일 경우 랜덤으로
   const findHighestScore = () => {
     const sortedProjects = [...score].sort((a, b) => b.score - a.score);
-    console.log(score);
-
     // 가장 높은 점수를 가진 프로젝트 찾기
     const highScore = sortedProjects[0].score;
-
     const highScoreProjects = sortedProjects.filter(
       (project) => project.score === highScore
     );
-
     if (highScoreProjects.length > 1) {
       const randomIndex = Math.floor(Math.random() * highScoreProjects.length);
-      console.log("공동 1등이 있을때:");
-      console.log(highScoreProjects);
       return highScoreProjects[randomIndex];
     } else {
-      console.log("공동 1등이 없을때:");
-      console.log(highScoreProjects);
       return highScoreProjects[0];
     }
   };
@@ -68,21 +61,12 @@ function Questions() {
   return (
     <section className="questions-container">
       <Progbar index={index} />
-      <div className="question-card">
-        <div className="question-number">
-          <p>{questionNum}</p>
-          <div className="underline underline-question"></div>
-        </div>
-        <p className="question-text">{question}</p>
-      </div>
-      <div className="btn-answer-container">
-        <button className="btn btn-answer" onClick={() => handleClick(answer1)}>
-          {answer1.text}
-        </button>
-        <button className="btn btn-answer" onClick={() => handleClick(answer2)}>
-          {answer2.text}
-        </button>
-      </div>
+      <QuestionCard questionNum={questionNum} question={question} />
+      <AnswerButton
+        answer1={answer1}
+        answer2={answer2}
+        handleClick={handleClick}
+      />
     </section>
   );
 }
