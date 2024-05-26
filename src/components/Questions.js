@@ -18,11 +18,12 @@ function Questions() {
     handleNextQuestion();
   };
 
-  //4.스코어가 가장 높은 프로젝트 찾기/ 공동1등일 경우 랜덤으로
+
+
+  //가장 점수가 높은 프로젝트 찾기
   const findHighestScore = () => {
-    const sortedProjects = [...score].sort((a, b) => b.score - a.score);
-    const highScore = sortedProjects[0].score;
-    const highScoreProjects = sortedProjects.filter(
+    const highScore = Math.max(...score.map((project => project.score)))
+    const highScoreProjects = score.filter(
       (project) => project.score === highScore
     );
     if (highScoreProjects.length > 1) {
@@ -42,6 +43,7 @@ function Questions() {
       setIndex(index + 1);
     }
   };
+
 
   return (
     <section className="questions-container">
