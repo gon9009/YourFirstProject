@@ -1,11 +1,6 @@
-import { useContext } from "react";
-import { ScoreContext } from "../context/ScoreContext";
-
-
-// 스코어 업데이트
-// 일반 함수로 취급 , cOntext 사용 불가 
-function ScoreUpdate(answer) {
-  const { score, setScore } = useContext({ScoreContext})
+// 1.훅 호출은 / 일반함수이기 떄문에 Hook 사용 불가 
+// 스코어 업데이트 함수
+function scoreUpdate(answer,score,setScore) {
   const selectedProject = score.find(
     (project) => project.name === answer.project
   );
@@ -23,4 +18,4 @@ function ScoreUpdate(answer) {
   }
 }
 
-export default ScoreUpdate;
+export default scoreUpdate;
