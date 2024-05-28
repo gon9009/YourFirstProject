@@ -1,7 +1,7 @@
 import React from "react";
 import RecommendVideo from "./RecommendVideo";
 
-function ResultPage({ recommendProject, moveMainPage }) {
+function ResultPageUI({ recommendProject, moveMainPage }) {
   return (
     <section className="result-container">
       {/* 결과 타이틀 */}
@@ -36,4 +36,4 @@ function ResultPage({ recommendProject, moveMainPage }) {
   );
 }
 
-export default ResultPage;
+export default ResultPageUI;

@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { ScoreContext } from "../../context/ScoreContext";
-import ResultPage from "./ResultPage";
+import ResultPage from "./ResultPageUI";
 
 function ResultPageContainer() {
   const navigate = useNavigate();

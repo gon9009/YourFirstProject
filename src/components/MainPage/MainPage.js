@@ -10,6 +10,7 @@ function MainPage() {
     <>
       {/* 설명 영역 */}
       <section className="desc-container">
+        {/* DescriptionIcon 컴포넌트를 사용하여 아이콘과 텍스트 표시 */}
         <DescriptionIcon
           icon={faThumbsUp}
           text="나에게 알맞는"

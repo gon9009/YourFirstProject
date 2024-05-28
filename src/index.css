@@ -6,6 +6,11 @@
   list-style: none;
 }
 
+/* 색상 변수 정의 */
+:root {
+  --primary-color: #1d67fd;
+}
+
 body {
   font-size: 1.2rem;
   font-family: "Orbit", sans-serif;
@@ -41,14 +46,11 @@ body {
   cursor: pointer;
 }
 
-.btn link {
-  text-decoration: none;
-}
-
 .btn:hover {
   background-color: #0056b3;
 }
-/* 전체영역 Wrapper + 내부 중앙정렬 컨테이너 */
+
+/* 전체영역 Wrapper(body 대체) */
 .wrapper {
   display: flex;
   align-items: center;
@@ -76,7 +78,7 @@ body {
   max-height: 720px;
 }
 
-/* ============ 설명 영역=================== */
+/* ============ MainPage =================== */
 .desc-container {
   display: flex;
   justify-content: center;
@@ -95,7 +97,7 @@ body {
   padding: 0 1.1rem;
 }
 
-.desc p {
+.desc-container .desc p {
   font-size: 1rem;
   letter-spacing: -0.14rem;
   color: #909090;
@@ -117,13 +119,6 @@ body {
   object-fit: contain;
 }
 
-/* =========== 타이틀 영역 =============== */
-.title-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 h1 {
   font-size: 2.4rem;
   font-weight: 800;
@@ -131,27 +126,27 @@ h1 {
   padding-bottom: 10px;
 }
 
-/* 반응형으로 교체 */
 .underline {
-  background-color: #1d67fd;
+  background-color: var(--primary-color);
   border-radius: 20px;
   margin: 0 auto;
-  width: 150px;
+  width: 30%;
   height: 5px;
   transition: all ease 0.3s;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .title-start {
   margin-top: 20px;
 }
-/* =============== 질문 (Quetsions) 영역 ===================== */
-.questions-container {
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+/* =============== QuestionsUI ===================== */
 
+/* 진행 바 */
 .progbar-container {
   height: 8px;
   width: 90%;
@@ -163,8 +158,16 @@ h1 {
 .progbar {
   height: 100%;
   border-radius: 20px;
-  background-color: rgb(0, 135, 245);
+  background-color: var(--primary-color);
   transition: all 0.3s ease-in;
+}
+
+/* 질문 영역 */
+.questions-container {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .question-card {
@@ -183,8 +186,7 @@ h1 {
 }
 
 .underline-question {
-  width: 15px;
-  height: 4px;
+  width: 35%;
 }
 
 .question-text {
@@ -194,8 +196,7 @@ h1 {
   line-height: 1.6;
 }
 
-/* ================== 질문/선택 버튼 ======================= */
-
+/* 선택 버튼 */
 .btn-answer-container {
   margin: 0 auto;
   width: 90%;
@@ -209,7 +210,7 @@ h1 {
   border-radius: 10px;
   width: 100%;
 }
-/* =================== 결과 페이지 영역 ============================ */
+/* =================== ResultPageUI ============================ */
 .result-container {
   display: flex;
   flex-direction: column;
@@ -218,23 +219,20 @@ h1 {
 }
 
 .result-title-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
 }
 
 .result-title {
-  display: flex;
+  display: inline-flex;
   align-items: center;
 }
 
 .result-title-highlight {
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: 0 10px;
 }
 
 .underline-result {
-  width: 20px;
+  width: 50%;
 }
 
 /* 프로젝트 추천*/
@@ -246,7 +244,7 @@ h1 {
 .project-recommendation h2 {
   margin-right: 10px;
   border-bottom: 3px solid transparent;
-  animation: fadeInUnderline 7s ease forwards; /* 애니메이션 적용 */
+  animation: fadeInUnderline 7s ease forwards;
 }
 
 @keyframes fadeInUnderline {
@@ -254,7 +252,7 @@ h1 {
     border-color: transparent;
   }
   100% {
-    border-color: #1d67fd;
+    border-color: var(--primary-color);
   }
 }
 
