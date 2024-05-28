@@ -3,7 +3,7 @@ import MainPage from "./components/MainPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import Questions from "./components/Questions";
-import ResultPage from "./components/ResultPage";
+import ResultPageContainer from "./components/ResultPageContainer.js";
 import { ScoreProvider } from "./context/ScoreContext";
 
 function App() {
@@ -14,7 +14,10 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route path="/" element={<MainPage />} />
             <Route path="/questions" element={<Questions />} />
-            <Route path="/result/:projectType" element={<ResultPage />} />
+            <Route
+              path="/result/:projectType"
+              element={<ResultPageContainer />}
+            />
           </Route>
         </Routes>
       </BrowserRouter>

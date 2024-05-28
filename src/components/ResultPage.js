@@ -1,22 +1,7 @@
-import React, { useContext } from "react";
-import { useNavigate, useParams } from "react-router-dom";
-import { ScoreContext } from "../context/ScoreContext";
+import React from 'react'
 import RecommendVideo from "./RecommendVideo";
 
-function ResultPage() {
-  const navigate = useNavigate();
-  const { projectType } = useParams();
-  const { score, resetScore } = useContext(ScoreContext);
-
-  const recommendProject = score.find(
-    (project) => project.projectType === parseInt(projectType)
-  );
-
-  // 메인페이지 이동 
-    const moveMainPage = () => {
-    resetScore();
-    navigate("/");
-  };
+function ResultPage({recommendProject,moveMainPage}) {
 
   return (
     <section className="result-container">
