@@ -1,5 +1,5 @@
 import React from "react";
-import useFetchVideo from "./Hooks/useFetchVideo";
+import useFetchVideo from "../Hooks/useFetchVideo";
 
 // 유튜브 추천 화면
 function RecommendVideo({ recommendProject }) {

@@ -1,9 +1,9 @@
 import React, { useContext, useState } from "react";
-import QnA from "../data/QnA";
+import QnA from "../../data/QnA";
 import { useNavigate } from "react-router-dom";
-import { ScoreContext } from "../context/ScoreContext";
-import findHighestScore from "./utils/FindHighestScore";
-import scoreUpdate from "./utils/ScoreUpdate";
+import { ScoreContext } from "../../context/ScoreContext";
+import findHighestScore from "../utils/findHighestScore";
+import scoreUpdate from "../utils/scoreUpdate";
 import QuestionsUI from "./QuestionsUI";
 
 function QuestionsContainer() {

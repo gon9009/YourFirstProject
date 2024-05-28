@@ -2,7 +2,7 @@ import React from "react";
 import Progbar from './Progbar'
 import QuestionCard from './QuestionCard'
 import AnswerButton from './AnswerButton'
-import QnA from '../data/QnA'
+import QnA from '../../data/QnA'
 
 
 function QuestionsUI({index,handleClick}) {

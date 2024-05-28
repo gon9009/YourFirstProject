@@ -1,7 +1,7 @@
 import React from "react";
 import { faCheck, faQuestion } from "@fortawesome/free-solid-svg-icons";
 import { faThumbsUp } from "@fortawesome/free-regular-svg-icons";
-import ThinkingEmoji from "../assets/ThinkingEmoji.gif";
+import ThinkingEmoji from "../../assets/ThinkingEmoji.gif";
 import { Link } from "react-router-dom";
 import DescriptionIcon from "./DescriptionIcon";
 

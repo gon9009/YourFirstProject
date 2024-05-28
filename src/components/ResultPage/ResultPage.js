@@ -1,5 +1,5 @@
 import React from "react";
-import RecommendVideo from "../RecommendVideo";
+import RecommendVideo from "./RecommendVideo";
 
 function ResultPage({ recommendProject, moveMainPage }) {
   return (
