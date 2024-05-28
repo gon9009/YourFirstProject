@@ -1,10 +1,10 @@
 import React from "react";
-import MainPage from "./components/MainPage";
+import MainPage from "./components/MainPage/MainPage.js";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "./components/Layout";
-import Questions from "./components/Questions";
-import ResultPageContainer from "./components/ResultPageContainer.js";
+import Layout from "./components/Layout/Layout.js";
+import ResultPageContainer from "./components/ResultPage/ResultPageContainer.js.js";
 import { ScoreProvider } from "./context/ScoreContext";
+import QuestionsContainer from "./components/Questions/QuestionsContainer.js";
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route path="/" element={<MainPage />} />
-            <Route path="/questions" element={<Questions />} />
+            <Route path="/questions" element={<QuestionsContainer />} />
             <Route
               path="/result/:projectType"
               element={<ResultPageContainer />}

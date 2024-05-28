@@ -5,24 +5,22 @@ import ThinkingEmoji from "../assets/ThinkingEmoji.gif";
 import { Link } from "react-router-dom";
 import DescriptionIcon from "./DescriptionIcon";
 
-// 프레젠테이션 컴포넌트 
 function MainPage() {
   return (
     <>
       {/* 설명 영역 */}
       <section className="desc-container">
-        <DescriptionIcon 
-        icon={faThumbsUp} 
-        text= "나에게 알맞는"
-        text2="첫 프로젝트!"
-        />
         <DescriptionIcon
-         icon={faCheck}
-         text="질문은 총 10개!"/>
-        <DescriptionIcon 
-         icon={faQuestion}
-         text="뭘 만들지"
-         text2="고민하시나요?"/>
+          icon={faThumbsUp}
+          text="나에게 알맞는"
+          text2="첫 프로젝트!"
+        />
+        <DescriptionIcon icon={faCheck} text="질문은 총 10개!" />
+        <DescriptionIcon
+          icon={faQuestion}
+          text="뭘 만들지"
+          text2="고민하시나요?"
+        />
       </section>
 
       {/* 타이틀 영역 */}

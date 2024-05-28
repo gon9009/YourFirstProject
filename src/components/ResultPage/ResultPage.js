@@ -1,11 +1,9 @@
-import React from 'react'
-import RecommendVideo from "./RecommendVideo";
+import React from "react";
+import RecommendVideo from "../RecommendVideo";
 
-function ResultPage({recommendProject,moveMainPage}) {
-
+function ResultPage({ recommendProject, moveMainPage }) {
   return (
     <section className="result-container">
-      
       {/* 결과 타이틀 */}
       <div className="result-title-container">
         <h1 className="result-title">

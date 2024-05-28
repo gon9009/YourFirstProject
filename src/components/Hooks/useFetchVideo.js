@@ -9,7 +9,7 @@ function useFetchVideo(recommendProject) {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    const fetchURL = `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&q=${recommendProject.searchingyoutube}&part=snippet&type=video`;
+    const fetchURL = `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&q=${recommendProject.youtubekeywords}&part=snippet&type=video`;
 
     const fetchVideo = async () => {
       setLoading(true);
