@@ -9,10 +9,14 @@ yourFirstProjects는 프론트엔드 개발 초보자들을 위한 리액트JS �
 
 - 5/9 - 5/27
 
-### GET Start 
+### Project Start
 
 ```markdown
+- git clone 
+git clone https://github.com/gon9009/YourFirstProject.git
 
+- project start 
+npm install
 ```
 
 ### Project Skill
