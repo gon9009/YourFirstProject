@@ -16,7 +16,7 @@ function useFetchVideo(recommendProject) {
         const response = await axios.get(fetchURL);
         setVideo(response.data.items[0]);
       } catch (error) {
-        setError("돋영상을 가져오는데 실패했습니다!");
+        setError("동영상을 가져오는데 실패했습니다!");
       } finally {
         setLoading(false);
       }
