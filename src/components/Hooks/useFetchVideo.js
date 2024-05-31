@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-const API_KEY = process.env.REACT_APP_API_KEY;
 
 // 추천 영상 패칭 커스텀 훅
 function useFetchVideo(recommendProject) {
@@ -9,7 +8,7 @@ function useFetchVideo(recommendProject) {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    const fetchURL = `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&q=${recommendProject.youtubekeywords}&part=snippet&type=video`;
+    const fetchURL = `https://www.googleapis.com/youtube/v3/search?key=${process.env.REACT_APP_API_KEY}&q=${recommendProject.youtubekeywords}&part=snippet&type=video`;
 
     const fetchVideo = async () => {
       setLoading(true);
@@ -26,7 +25,7 @@ function useFetchVideo(recommendProject) {
     fetchVideo();
   }, [recommendProject]);
 
-  return {video,error,loading};
+  return { video, error, loading };
 }
 
 export default useFetchVideo;

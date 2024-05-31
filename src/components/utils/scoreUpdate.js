@@ -1,4 +1,3 @@
-// 1.훅 호출은 / 일반함수이기 떄문에 Hook 사용 불가 
 // 스코어 업데이트 함수
 function scoreUpdate(answer,score,setScore) {
   const selectedProject = score.find(

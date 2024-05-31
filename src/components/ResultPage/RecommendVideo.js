@@ -6,12 +6,13 @@ function RecommendVideo({ recommendProject }) {
   const { video, error, loading } = useFetchVideo(recommendProject);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div>로딩중....</div>;
   }
 
   if (error) {
     return <div>{error}</div>;
   }
+  
   return (
     <section className="recommend-video">
       {video && (
