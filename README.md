@@ -7,7 +7,7 @@ yourFirstProjects는 프론트엔드 개발 초보자들을 위한 리액트JS �
 
 ### 개발 기간 
 
-- 
+- 5/9 - 5/27
 
 ### GET Start 
 
