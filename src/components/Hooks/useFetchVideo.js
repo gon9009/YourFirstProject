@@ -8,6 +8,8 @@ function useFetchVideo(recommendProject) {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    console.log("API Key:", process.env.REACT_APP_API_KEY); // 환경 변수가 제대로 로드되는지 확인
+
     const fetchURL = `https://www.googleapis.com/youtube/v3/search?key=${process.env.REACT_APP_API_KEY}&q=${recommendProject.youtubekeywords}&part=snippet&type=video`;
 
     const fetchVideo = async () => {
