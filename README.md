@@ -17,6 +17,15 @@ git clone https://github.com/gon9009/YourFirstProject.git
 - 프로젝트 시작  
 npm install
 ```
+### ! API 키 사용방법
+
+```markdown
+현재 프로젝트는 유튜브 API가 활용된 프로젝트입니다 
+테스트용 API 키는 .env.test에 저장되어 있습니다 
+저의 프로젝트를 clone 하셔서 사용하실때
+cp .env.test .env 
+위 명령어로 .env 파일을 복사해주세요 !  
+```
 
 ### Project Skill
 
