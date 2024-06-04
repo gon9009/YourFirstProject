@@ -1,3 +1,4 @@
+// 사용자 스코어 저장 데이터 
 const ProjectScore = [
   {
     name: "투두 리스트",

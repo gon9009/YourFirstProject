@@ -1,3 +1,4 @@
+// 질문/선택지 데이터 
 const QnA = [
   {
     questionNum: "Q1.",

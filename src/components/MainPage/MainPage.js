@@ -38,13 +38,19 @@ function MainPage() {
 
       {/* 이미지 영역 */}
       <section className="emoji-container">
-        <img src={ThinkingEmoji} alt="Thinking Emoji" />
+        <img src={ThinkingEmoji} alt="생각하는 이모지 사진" />
       </section>
 
       {/* 버튼 영역 */}
       <section className="btn-container">
-        <Link to="/questions" className="btn-link">
-          <button className="btn">시작하기</button>
+        <Link
+          to="/questions"
+          className="btn-link"
+          aria-label="질문 페이지로 이동"
+        >
+          <button aria-label="시작하기" className="btn">
+            시작하기
+          </button>
         </Link>
       </section>
     </>
