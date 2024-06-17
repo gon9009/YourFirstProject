@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-// 추천 영상 패칭 커스텀 훅
+// 리액트 쿼리로 리팩토링
 function useFetchVideo(recommendProject) {
   const [video, setVideo] = useState(null);
   const [error, setError] = useState(null);

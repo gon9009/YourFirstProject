@@ -1,0 +1,63 @@
+@import "./variables.scss";
+
+.progbar-container {
+  height: 8px;
+  width: 90%;
+  border-radius: 20px;
+  margin: 1.4rem auto;
+  background-color: #e6ddddfb;
+}
+
+.progbar {
+  height: 100%;
+  border-radius: 20px;
+  background-color: $primary-color;
+  transition: all 0.3s ease-in;
+}
+
+.questions-container {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.question-card {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.question-number {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0 auto;
+}
+
+.underline-question {
+  width: 35%;
+}
+
+.question-text {
+  font-size: 30px;
+  margin-top: 30px;
+  margin-bottom: 100px;
+  line-height: 1.6;
+}
+
+.btn-answer-container {
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-answer {
+  color: white;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  width: 100%;
+}

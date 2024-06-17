@@ -1,0 +1,54 @@
+@import './variables.scss';
+
+.result-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .result-title-container {
+    text-align: center;
+  }
+  
+  .result-title {
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .result-title-highlight {
+    margin: 0 10px;
+  }
+  
+  .underline-result {
+    width: 50%;
+  }
+  
+  .project-recommendation {
+    display: flex;
+    align-items: center;
+  }
+  
+  .project-recommendation h2 {
+    margin-right: 10px;
+    border-bottom: 3px solid transparent;
+    animation: fadeInUnderline 7s ease forwards;
+  }
+  
+  @keyframes fadeInUnderline {
+    0% {
+      border-color: transparent;
+    }
+    100% {
+      border-color: $primary-color;
+    }
+  }
+  
+  .project-recommendation p {
+    font-size: 1.4rem;
+  }
+  
+  .recommend-video {
+    margin: 20px;
+  }
+  
