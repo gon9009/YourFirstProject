@@ -1,8 +1,1 @@
-@import "../src/styles/_variables.scss";
-@import "../src/styles/_reset.scss";
-@import "../src/styles/_base.scss";
-@import "../src/styles/_buttons.scss";
-@import "../src/styles/_layout.scss";
-@import "../src/styles/_main.scss";
-@import "../src/styles/_questions.scss";
-@import "../src/styles/_result.scss";
+@import '../src/styles/_reset.scss'

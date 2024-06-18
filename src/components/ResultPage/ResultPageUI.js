@@ -1,5 +1,6 @@
 import React from "react";
 import RecommendVideo from "./RecommendVideo";
+import './ResultPageUI.scss';
 
 function ResultPageUI({ recommendProject, moveMainPage }) {
   return (

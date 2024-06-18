@@ -3,7 +3,7 @@ import Progbar from './Progbar'
 import QuestionCard from './QuestionCard'
 import AnswerButton from './AnswerButton'
 import QnA from '../../data/QnA'
-
+import './QuestionUI.scss';
 
 function QuestionsUI({index,handleClick}) {
     const { questionNum, question, answer1, answer2 } = QnA[index];

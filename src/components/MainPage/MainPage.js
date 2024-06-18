@@ -4,6 +4,7 @@ import { faThumbsUp } from "@fortawesome/free-regular-svg-icons";
 import ThinkingEmoji from "../../assets/ThinkingEmoji.gif";
 import { Link } from "react-router-dom";
 import DescriptionIcon from "./DescriptionIcon";
+import './MainPage.scss';
 
 function MainPage() {
   return (
